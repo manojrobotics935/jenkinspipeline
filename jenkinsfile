@@ -6,7 +6,7 @@ pipeline {
            steps {
 		echo "CHROME BROWSER TESTING"
 		sh '''
-			sleep
+			sleep 5
 			exit 0
 		'''
               }	
