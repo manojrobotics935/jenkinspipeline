@@ -1,8 +1,10 @@
 pipeline {
 	agent any;
 	stages {
+	   stage ('TIMEZONE') {
 	   state {	
 		TZ=Asia/Seoul
-	   }	
+	   }
+	      }	
 	}	
 }	
