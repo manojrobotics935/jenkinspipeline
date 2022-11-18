@@ -1,9 +1,11 @@
 pipeline {
 	agent any;
-	stages ('PARALLEL STAGE') {
-	  parallel {
-	  stage ('TEST ON CHROME') {
-           steps {
+	stages {
+	  
+	  stage ('PARALLEL STAGE') {
+          parallel {
+	  	stage ('TEST ON CHROME') {
+	  	steps {
 		echo "CHROME BROWSER TESTING"
 		sh '''
 			sleep 5
@@ -20,6 +22,7 @@ pipeline {
 		'''	
               }	
          }
+	   }
 	  }
 	  stage ('TEST') {
            steps {
