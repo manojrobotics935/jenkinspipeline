@@ -1,7 +1,7 @@
 pipeline {
 	agent any;
 	stages {
-	   state{	
+	   state {	
 		TZ=Asia/Seoul
 	   }	
 	}	
