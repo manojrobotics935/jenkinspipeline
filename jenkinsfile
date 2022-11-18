@@ -7,14 +7,12 @@ pipeline {
 		echo "THIS IS SAMPLE"
               }	
            }
-	   stages {
 	  stage ('DEPLOY') {
            steps {
 		echo "This is my first DEPLOY in pipeline"
 		echo "THIS IS SAMPLE IN DEPLOY"
               }	
          }
-	 stages {
 	  stage ('TEST') {
            steps {
 		echo "This is my first TEST in pipeline"
