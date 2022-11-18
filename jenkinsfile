@@ -1,34 +1,8 @@
 pipeline {
 	agent any;
 	stages {
-	  
-	  stage ('PARALLEL STAGE') {
-          parallel {
-	  	stage ('TEST ON CHROME') {
-	  	steps {
-		echo "CHROME BROWSER TESTING"
-		sh '''
-			sleep 5
-			exit 0
-		'''
-              }	
-           }
-	  stage ('TEST ON SAFARI') {
-           steps {
-		echo "SAFARI BROWSER TESTING"
-		sh '''
-			sleep 5
-			exit 0
-		'''	
-              }	
-         }
-	   }
-	  }
-	  stage ('TEST') {
-           steps {
-		echo "This is my first TEST in pipeline"
-		echo "THIS IS SAMPLE IN TEST"
-              }	
-           }
-	}
-}
+	   state{	
+		TZ=Asia/Seoul
+	   }	
+	}	
+}	
