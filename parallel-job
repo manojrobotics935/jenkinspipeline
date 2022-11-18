@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+    parameters {
+  string defaultValue: 'TEST', description: 'environment to deploy test', name: 'ENV', trim: true
+}
+    stages {
+        stage('stage1') {
+            steps {
+                sh '''
+                echo "Hi how your"
+                timedatectl
+                '''
+            }
+        }
+        stage('PARALLEL') {
+        environment {
+                NAME = 'MANOJ'
+            }
+        parallel {
+        stage('stage2') {
+            steps {
+            echo "Hi this is the second stage of build"
+            }
+        }
+        stage('stage3') {
+            steps {
+                echo "$NAME"
+            }
+        }
+        }
+    }
+        
+    }
+}
