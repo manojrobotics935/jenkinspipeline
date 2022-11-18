@@ -1,10 +1,18 @@
 pipeline {
 	agent any;
 	stages {
-	   stage ('TIMEZONE') {
+	   stage {
 	   state {	
 		TZ=Asia/Seoul
 	   }
 	      }	
+	      stage {
+	   state {	
+		sh '''
+		echo " time zone"
+		'''
+	   }
+	      }	
+	      
 	}	
 }	
