@@ -11,6 +11,10 @@ pipeline {
            steps {
 		echo "This is my first DEPLOY in pipeline"
 		echo "THIS IS SAMPLE IN DEPLOY"
+		sh '''
+			sleep 5
+			exit 0
+		'''	
               }	
          }
 	  stage ('TEST') {
